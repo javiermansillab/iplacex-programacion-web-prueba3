@@ -28,12 +28,13 @@ def ejercicio2():
         nombre2 = request.form["nombre2"].strip()
         nombre3 = request.form["nombre3"].strip()
         if nombre1 == "" or nombre2 == "" or nombre3 == "":
-            return render_template(
-                "ejercicio2.html",
-                error="Debes ingresar los tres nombres."
-            )
-        nombre_mayor = nombre1
+            return render_template("ejercicio2.html",error="Debes ingresar los tres nombres.")
+        if  (nombre1.lower() == nombre2.lower()
+            or nombre1.lower() == nombre3.lower()
+            or nombre2.lower() == nombre3.lower()):
+            return render_template("ejercicio2.html",error="Debes ingresar tres nombres diferentes.")
         
+        nombre_mayor = nombre1
         if len(nombre2) > len(nombre_mayor):
             nombre_mayor = nombre2
         if len(nombre3) > len(nombre_mayor):
