@@ -21,6 +21,24 @@ def ejercicio1():
         return render_template("ejercicio1.html", promedio=promedio, estado=estado)
     return render_template("ejercicio1.html")
 
+@app.route("/ejercicio2", methods=["GET", "POST"])
+def ejercicio2():
+    if request.method == "POST":
+        nombre1 = request.form["nombre1"]
+        nombre2 = request.form["nombre2"]
+        nombre3 = request.form["nombre3"]
+        nombre_mayor = nombre1
+        
+        if len(nombre2) > len(nombre_mayor):
+            nombre_mayor = nombre2
+        if len(nombre3) > len(nombre_mayor):
+            nombre_mayor = nombre3
+
+        cantidad = len(nombre_mayor)
+        return render_template("ejercicio2.html", nombre_mayor=nombre_mayor, cantidad=cantidad)
+
+    return render_template("ejercicio2.html")
+
 
 if __name__ == "__main__":
     app.run()
