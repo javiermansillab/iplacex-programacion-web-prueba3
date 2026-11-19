@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+}
+label {
+    display: block;
+    margin-top: 15px;
+}
+input {
+    padding: 8px;
+    margin-bottom: 10px;
+}
+button {
+    display: block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+body {
+    font-family: Arial, sans-serif;
+    padding: 30px;
+}
+.boton-menu {
+    display: inline-block;
+    padding: 20px;
+    margin: 10px;
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+}
