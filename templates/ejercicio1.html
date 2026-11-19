@@ -33,7 +33,7 @@
 </form>
 
 {% if promedio is defined %}
-    <p>Promedio: {{ promedio }}</p>
+    <p>Promedio: {{ "%.2f"|format(promedio) }}</p>
     <p>Estado: {{ estado }}</p>
 {% endif %}
 

@@ -27,6 +27,10 @@
     <p>Cantidad de caracteres: {{ cantidad }}</p>
 {% endif %}
 
+{% if error is defined %}
+    <p>{{ error }}</p>
+{% endif %}
+
     <a href="/">Volver al menú</a>
 </body>
 </html>

@@ -24,9 +24,14 @@ def ejercicio1():
 @app.route("/ejercicio2", methods=["GET", "POST"])
 def ejercicio2():
     if request.method == "POST":
-        nombre1 = request.form["nombre1"]
-        nombre2 = request.form["nombre2"]
-        nombre3 = request.form["nombre3"]
+        nombre1 = request.form["nombre1"].strip()
+        nombre2 = request.form["nombre2"].strip()
+        nombre3 = request.form["nombre3"].strip()
+        if nombre1 == "" or nombre2 == "" or nombre3 == "":
+            return render_template(
+                "ejercicio2.html",
+                error="Debes ingresar los tres nombres."
+            )
         nombre_mayor = nombre1
         
         if len(nombre2) > len(nombre_mayor):
