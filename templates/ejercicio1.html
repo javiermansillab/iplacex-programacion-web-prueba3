@@ -29,12 +29,12 @@
             <button type="submit">Enviar</button>
         </form>
 
-            <!-- Mostrar un mensaje si los datos no son válidos -->
+        <!-- Mostrar un mensaje si los datos no son válidos -->
         {% if error is defined %}
             <p>{{ error }}</p>
         {% endif %}
 
-        <!-- Mostrar los resultados después de procesar el formulario -->
+        <!-- Mostrar los resultados -->
         {% if promedio is defined %}
             <p>{{ promedio }}</p>
             <p>{{ estado }}</p>
