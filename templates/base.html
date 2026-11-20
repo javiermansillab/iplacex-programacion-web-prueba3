@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Cada página podrá definir su título -->
+    <title>{% block titulo %}Prueba 3{% endblock %}</title>
+
+    <!-- Estilos compartidos por las páginas -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='estilos.css') }}">
+</head>
+
+<body>
+    <!-- Cada página colocará su propio contenido -->
+    {% block contenido %}
+    {% endblock %}
+</body>
+
+</html>

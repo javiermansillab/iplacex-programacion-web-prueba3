@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Ejercicio 1</title>
+{% extends "base.html" %}
 
-    <!-- Cargar los estilos compartidos del proyecto -->
-    <link rel="stylesheet"
-          href="{{ url_for('static', filename='estilos.css') }}">
-</head>
-<body>
+{% block titulo %}Ejercicio 1{% endblock %}
+
+{% block contenido %}
+
     <!-- Formulario y sus resultados -->
     <div class="contenedor">
         <h1>Formulario de Notas</h1>
@@ -34,11 +29,15 @@
             <button type="submit">Enviar</button>
         </form>
 
+            <!-- Mostrar un mensaje si los datos no son válidos -->
+        {% if error is defined %}
+            <p>{{ error }}</p>
+        {% endif %}
+
         <!-- Mostrar los resultados después de procesar el formulario -->
         {% if promedio is defined %}
             <p>{{ promedio }}</p>
             <p>{{ estado }}</p>
         {% endif %}
     </div>
-</body>
-</html>
+{% endblock %}

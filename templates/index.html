@@ -1,16 +1,9 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Prueba 3 - Programación Web</title>
+{% extends "base.html" %}
 
-    <!-- Cargar los estilos compartidos del proyecto -->
-    <link rel="stylesheet"
-          href="{{ url_for('static', filename='estilos.css') }}">
-</head>
-<body>
+{% block titulo %}Prueba 3 - Programación Web{% endblock %}
+
+{% block contenido %}
     <!-- Accesos a los dos ejercicios -->
-    <a href="/ejercicio1" class="boton-menu">Ejercicio 1</a>
-    <a href="/ejercicio2" class="boton-menu">Ejercicio 2</a>
-</body>
-</html>
+    <a href="/ejercicio/1" class="boton-menu">Ejercicio 1</a>
+    <a href="/ejercicio/2" class="boton-menu">Ejercicio 2</a>
+{% endblock %}
