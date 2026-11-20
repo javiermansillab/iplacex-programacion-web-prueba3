@@ -1,32 +1,83 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
 }
+
+/* Etiquetas de los formularios */
 label {
     display: block;
     margin-top: 15px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 18px;
 }
+
+/* Campos de entrada */
 input {
-    padding: 8px;
+    width: 95%;
+    padding: 10px;
     margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
 }
+
+/* Botón para enviar los datos */
 button {
     display: block;
     margin-top: 15px;
     padding: 10px 20px;
-    background-color: blue;
+    background-color: #007bff;
     color: white;
     border: none;
+    border-radius: 3px;
+    font-size: 16px;
     cursor: pointer;
 }
+
 body {
     font-family: Arial, sans-serif;
     padding: 30px;
 }
+
+/* Enlaces del menú con apariencia de botón */
 .boton-menu {
-    display: inline-block;
-    padding: 20px;
-    margin: 10px;
-    background-color: blue;
+    display: block;
+    width: 240px;
+    margin: 30px auto;
+    padding: 30px 20px;
+    background-color: #007bff;
     color: white;
-    text-decoration: none;
+    border-radius: 12px;
+    font-family: "Times New Roman", serif;
+    font-size: 32px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+/* Tarjeta blanca que contiene el ejercicio */
+.contenedor {
+    max-width: 500px;
+    margin: auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Presentación del ejercicio de nombres */
+.nombres {
+    text-align: center;
+    font-family: "Times New Roman", serif;
+    font-size: 18px;
+    border-radius: 12px;
+}
+
+.nombres label {
+    font-weight: normal;
+    font-size: 22px;
+}
+
+.nombres button {
+    margin: 15px auto;
 }

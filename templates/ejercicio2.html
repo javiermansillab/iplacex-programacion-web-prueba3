@@ -6,25 +6,28 @@
     <title>Ejercicio 2</title>
 </head>
 <body>
-    <h1>Comparar nombres</h1>
-    <p>Ingresa tres nombres para encontrar el más largo.</p>
+        <!-- Tarjeta del formulario de nombres -->
+    <div class="contenedor nombres">
 
 <form method="post">
     <label for="nombre1">Nombre 1:</label>
-    <input type="text" id="nombre1" name="nombre1" required>
+    <input type="text" id="nombre1" name="nombre1"
+       value="{{ nombre1 }}" required>
 
     <label for="nombre2">Nombre 2:</label>
-    <input type="text" id="nombre2" name="nombre2" required>
+    <input type="text" id="nombre2" name="nombre2"
+       value="{{ nombre2 }}" required>
 
     <label for="nombre3">Nombre 3:</label>
-    <input type="text" id="nombre3" name="nombre3" required>
+    <input type="text" id="nombre3" name="nombre3"
+       value="{{ nombre3 }}" required>
 
     <button type="submit">Enviar</button>
 </form>
 
 {% if nombre_mayor is defined %}
-    <p>Nombre más largo: {{ nombre_mayor }}</p>
-    <p>Cantidad de caracteres: {{ cantidad }}</p>
+    <p>El nombre con mayor cantidad de caracteres es : {{ nombre_mayor }}</p>
+    <p>El nombre tiene : {{ cantidad }} caracteres</p>
 {% endif %}
 
 {% if error is defined %}
@@ -32,5 +35,7 @@
 {% endif %}
 
     <a href="/">Volver al menú</a>
+
+    </div>
 </body>
 </html>
