@@ -2,40 +2,43 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
     <title>Ejercicio 2</title>
+
+    <!-- Cargar los estilos compartidos del proyecto -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='estilos.css') }}">
 </head>
 <body>
-        <!-- Tarjeta del formulario de nombres -->
+    <!-- Formulario de nombres -->
     <div class="contenedor nombres">
 
-<form method="post">
-    <label for="nombre1">Nombre 1:</label>
-    <input type="text" id="nombre1" name="nombre1"
-       value="{{ nombre1 }}" required>
+        <!-- Conservar nombres recibidos desde Python -->
+        <form method="post">
+            <label for="nombre1">Nombre 1:</label>
+            <input type="text" id="nombre1" name="nombre1"
+                   value="{{ nombre1 }}" required>
 
-    <label for="nombre2">Nombre 2:</label>
-    <input type="text" id="nombre2" name="nombre2"
-       value="{{ nombre2 }}" required>
+            <label for="nombre2">Nombre 2:</label>
+            <input type="text" id="nombre2" name="nombre2"
+                   value="{{ nombre2 }}" required>
 
-    <label for="nombre3">Nombre 3:</label>
-    <input type="text" id="nombre3" name="nombre3"
-       value="{{ nombre3 }}" required>
+            <label for="nombre3">Nombre 3:</label>
+            <input type="text" id="nombre3" name="nombre3"
+                   value="{{ nombre3 }}" required>
 
-    <button type="submit">Enviar</button>
-</form>
+            <button type="submit">Enviar</button>
+        </form>
 
-{% if nombre_mayor is defined %}
-    <p>El nombre con mayor cantidad de caracteres es : {{ nombre_mayor }}</p>
-    <p>El nombre tiene : {{ cantidad }} caracteres</p>
-{% endif %}
+        <!-- Mostrar el nombre seleccionado y su longitud -->
+        {% if nombre_mayor is defined %}
+            <p>El nombre con mayor cantidad de caracteres es : {{ nombre_mayor }}</p>
+            <p>El nombre tiene : {{ cantidad }} caracteres</p>
+        {% endif %}
 
-{% if error is defined %}
-    <p>{{ error }}</p>
-{% endif %}
-
-    <a href="/">Volver al menú</a>
-
+        <!-- Mostrar el mensaje si hay nombres repetidos -->
+        {% if error is defined %}
+            <p>{{ error }}</p>
+        {% endif %}
     </div>
 </body>
 </html>
